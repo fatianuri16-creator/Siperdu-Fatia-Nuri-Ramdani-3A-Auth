@@ -70,13 +70,22 @@ Pada kondisi ini semua halaman sudah membaca database, tetapi **belum ada login*
    php artisan migrate:fresh --seed
    ```
 
-7. Jalankan server:
+7. Pasang dependency front-end dan build aset yang dipakai halaman Breeze:
+
+   ```bash
+   npm install
+   npm run build
+   ```
+
+   Jika sedang mengembangkan tampilan, gunakan `npm run dev` sebagai pengganti `npm run build` dan biarkan prosesnya tetap berjalan.
+
+8. Jalankan server Laravel:
 
    ```bash
    php artisan serve
    ```
 
-8. Buka `http://127.0.0.1:8000`.
+9. Buka `http://127.0.0.1:8000`.
 
 > Pengguna macOS/Linux: ganti `copy .env.example .env` dengan `cp .env.example .env`.
 
